@@ -9,12 +9,13 @@ import {
   TouchableWithoutFeedback,
   Keyboard,
 } from 'react-native';
+// import Sandbox from './components/sandbox';
 import Header from './components/header';
 import TodoItem from './components/todoitem';
 import AddToDo from './components/addTodo';
 
 const App = () => {
-  var [todos, setTodos] = useState([
+  const [todos, setTodos] = useState([
     {text: 'learn vuejs', key: '1'},
     {text: 'learn angular', key: '2'},
     {text: 'learn reactnative', key: '3'},
@@ -38,6 +39,7 @@ const App = () => {
     }
   };
   return (
+    // <Sandbox />
     <TouchableWithoutFeedback
       onPress={() => {
         Keyboard.dismiss();
@@ -67,9 +69,11 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   content: {
+    flex: 1,
     padding: 40,
   },
   list: {
+    flex: 1,
     marginTop: 20,
   },
 });
